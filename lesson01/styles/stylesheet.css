@@ -1,0 +1,9 @@
+form {
+  border: 3px solid pink;
+  padding: 1.5rem;
+  margin: 0.8rem;
+}
+
+.submitted {
+  border: 3px solid green;
+}
