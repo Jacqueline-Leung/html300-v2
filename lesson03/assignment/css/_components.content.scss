@@ -1,17 +1,64 @@
+/*...set box model...*/
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *,
 *:after,
 *:before {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
-.main {
-    padding: 2rem;
+/*...layout...*/
+body {
+  background-color: $offwhite;
+  width: 100%;
+  margin: 1rem;
+  position: absolute;
+
+  .card {
+    background-color: $offwhite;
+    border: 3rem solid lighten($darkblue, 30%);
+
+    .who {
+      background-color: $offwhite;
+      text-align: center;
+    }
+
+    .info {
+      background-color: $lightblue;
+      font-family: $font-fam;
+    }
+  }
+}
+
+/*...text...*/
+@mixin font($size, $style) {
+  font-family: $font-fam;
+  color: $word;
+  font-size: $size;
+  font-style: $style;
 }
 
 h1 {
-    color: $red;  
+  @include font($font-size * 1.2, normal);
+}
+h2 {
+  @include font($font-size * 1, italic);
+}
+li {
+  @include font($font-size * 0.8, normal);
+  list-style: none;
+}
+
+/*...image...*/
+@mixin profile_image($width, $border-radius) {
+  width: $width;
+  border-radius: $border-radius;
+}
+
+.headshot {
+  @include profile_image(85%, 50%);
+  position: relative;
+  padding: 1.2rem;
 }
