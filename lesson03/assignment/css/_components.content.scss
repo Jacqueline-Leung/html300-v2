@@ -28,6 +28,9 @@ body {
     .info {
       background-color: $lightblue;
       font-family: $font-fam;
+      padding-left: none;
+      border-left: none;
+      text-align: left;
     }
   }
 }
@@ -46,9 +49,14 @@ h1 {
 h2 {
   @include font($font-size * 1, italic);
 }
+ul {
+  border-left: none;
+}
 li {
   @include font($font-size * 0.8, normal);
   list-style: none;
+  padding-left: none;
+  border-left: none;
 }
 
 /*...image...*/
@@ -56,9 +64,10 @@ li {
   width: $width;
   border-radius: $border-radius;
 }
-
-.headshot {
-  @include profile_image(85%, 50%);
-  position: relative;
-  padding: 1.2rem;
+.who {
+  img {
+    @include profile_image(85%, 50%);
+    position: relative;
+    padding: 1.2rem;
+  }
 }

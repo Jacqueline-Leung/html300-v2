@@ -8,13 +8,13 @@ const employees = JSON.parse (employeesJSON)
 employees.forEach(function (el){
     //set the outline of the card 
     let div1=document.createElement('div')
-    div1.setAttribute=('class', 'card')
+    div1.classList.add("card")
     div1.innerHTML=""
     let div2=document.createElement('div')
-    div1.setAttribute=('class', 'who')
+    div2.classList.add("who")
     div2.innerHTML=""
     let div3=document.createElement('div')
-    div1.setAttribute=('class', 'info')
+    div3.classList.add("info")
     div3.innerHTML=""
 
     //set elements in one div
@@ -47,8 +47,7 @@ employees.forEach(function (el){
     div2.insertBefore(h1, h2)
     div2.insertBefore(img, h1)
     div3.append(list)
-    
-
+  
 })
 
 
