@@ -1,52 +1,101 @@
-// Media Query Generator
+/*... responsive design...*/
+@media screen and (max-width: 499px) {
+  main {
+    margin: 1rem;
+    padding: 0.2rem;
 
-@mixin media-query($mq) {
-
-    $breakpoint-found: false;
-
-    // Loop through the list of breakpoints we’ve provided in our settings file.
-    @each $breakpoint in $breakpoints {
-
-        // Grab the alias and the condition from their respective locations in
-        // the list.
-        $alias:     nth($breakpoint, 1);
-        $condition: nth($breakpoint, 2);
-
-        // If the media query we’ve specified has an alias and a condition...
-        @if $mq == $alias and $condition {
-
-            // ...tell the mixin that we’ve found it...
-            $breakpoint-found: true;
-
-            // ...and spit it out here.
-            @media #{$condition} {
-                @content;
-            }
-
-        }
-
+    .who {
+      margin: 1.5rem 0;
+      margin-bottom: 0;
+      padding: 0.5rem;
     }
-
-    // If the user specifies a non-exitent alias, send them a warning.
-    @if $breakpoint-found == false{
-        @warn "Oops! Breakpoint ‘#{$mq}’ does not exist."
+    .info {
+      margin: 2rem;
+      margin-bottom: none;
+      border: none;
+      padding: 1rem;
+      line-height: 1em;
     }
-
+  }
 }
 
-// Add breakpoints
-$breakpoints: (
-    "xl"            "screen and (min-width: 1300px)",
-    "desk"          "screen and (min-width: 1024px)",
-    "lg"            "screen and (min-width: 920px)",
-    "tab"           "screen and (min-width: 768px)",
-    "mobile"        "screen and (max-width: 767px)",
-    "infograph"     "screen and (min-width: 540px)",
-    "med"           "screen and (min-width: 40em)",
-    "sm"            "screen and (min-width: 30em)",
-    "small"         "screen and (min-width: 20em)",
-    "tiny"          "screen and (max-width: 320px)",
-    "retina"        "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)",
-    "ie"            "all and(-ms-high-contrast: none), (-ms-high-contrast: active)",
-    "ipad"          "screen and (min-device-width : 768px) and (max-device-width : 1024px)"
-) !default;
+@media screen and (min-width: 500px) and (max-width: 700px) {
+  main {
+    margin: 1.2rem;
+    padding: 0.4rem;
+
+    .who {
+      margin: 2rem 0;
+      margin-bottom: 0;
+      padding: 1rem;
+
+      .headshot {
+        @include profile_image(75%, 50%);
+      }
+
+      h1 {
+        @include font($font-size * 1.6, normal);
+      }
+      h2 {
+        @include font($font-size * 1.2, italic);
+      }
+    }
+    .info {
+      margin: 3rem;
+      margin-bottom: none;
+      border: none;
+      padding: 1.5rem;
+      line-height: 1.5em;
+
+      p {
+        @include font($font-size, normal);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 701px) {
+  main {
+    margin: 2rem auto;
+    padding: 0.6rem;
+    width: 80%;
+    height: 25%;
+    display: flex;
+    flex-wrap: nowrap;
+
+    .who {
+      margin: 2rem 0;
+      margin-bottom: 0;
+      padding: 1rem;
+      width: 34%;
+      height: 50%;
+      position: relative;
+
+      .headshot {
+        @include profile_image(100%, 50%);
+        position: relative;
+      }
+
+      h1 {
+        @include font($font-size * 1.6, normal);
+      }
+      h2 {
+        @include font($font-size * 1.2, italic);
+      }
+    }
+    .info {
+      margin: 2rem;
+      margin-bottom: none;
+      border: none;
+      padding: 1.5rem;
+      line-height: 2em;
+      width: 66%;
+      height: 50%;
+      position: relative;
+
+      p {
+        @include font($font-size, normal);
+      }
+    }
+  }
+}
