@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+        <link rel="stylesheet" href="../css/style.css" />
+        <title>My Cookbook | Assignment 06 - Bootstrap 4</title>
+    </head>
+    <body>
+        <div class="container">
+            <!--Nav bar-->
+            <nav class="navbar navbar-light bg-light navbar-expand-md">
+                <div class="container">
+                    <div class="navbar-brand text-success">Eat Well</div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#toggleNav" aria-controls="toggleNav" aria-expanded="false" aria-label="toggle navigation"><span class="navbar-toggler-icon"></span></button>                 
+                    <div class="collapse navbar-collapse" id="toggleNav">
+                        <div class="navbar-nav">
+                            <a class="nav-item nav-link" href="../index.html">Home</a>
+                            <a class="nav-item nav-link" href="recipes.html">Recipes</a>                            
+                            <a class="nav-item nav-link" href="nutritions.html">Nutritions</a>                           
+                            <a class="nav-item nav-link active" href="my-cookbook.html">My Cookbook</a>                           
+                        </div>
+                     </div>
+                </div>
+             </nav>
+        </div>
+        <!--Jumbotron-->
+        <div class="jumbotron jumbotron-fluid background bg-success p-5">
+            <div class="container">
+                <div class="display-4 mb-3">My Cookbook</div>
+                <p class="lead">Create your own cookbook, fill it with your favorite recipes.</p>
+           </div>
+        </div>
+        <!--adding tooltips-->
+        <div class="m-5 px-5">
+            <h3>My cookbook</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae facere, quaerat cum <a href="#" data-bs-toggle="tooltip" title="vegan">cumque</a> harum culpa suscipit eum atque, voluptas soluta consequatur minus error autem quas! Molestias id ex labore dolor molestiae laboriosam veritatis, libero, excepturi animi neque eius? Minus perferendis saepe, harum perspiciatis <a href="#" data-bs-toggle="tooltip" title="lactose-free">aneque</a> quaerat error eveniet suscipit dignissimos, iure vitae porro sint exercitationem. Excepturi enim porro quibusdam modi nam architecto nobis.</p>
+        </div>
+        <!--grid system-->
+        <div class="m-5 row justify-content-center">
+            <div class="mx-2 mb-3 px-3 border col-sm-5 col-md-4 col-lg-3 col-xl-2">
+                <h5 class="pt-3">Salads</h5>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam totam voluptate vel eaque? Laudantium nesciunt iste quo quod optio excepturi reprehenderit blanditiis minima sunt natus sit sed, aliquid error deleniti perspiciatis eaque enim, aliquam laboriosam dolores nihil ipsam non obcaecati? Vitae, ipsum? Quis pariatur eum praesentium laudantium earum.</p>
+            </div> 
+            <div class="mx-2 mb-3 px-3 border col-sm-5 col-md-4 col-lg-3 col-xl-2">
+                <h5 class="pt-3">Soup</h5>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto nesciunt veritatis iusto voluptatem cumque doloribus ipsa, molestiae ut molestias, accusantium temporibus nihil soluta asperiores velit ducimus modi reiciendis fugiat dolores.</p>
+            </div>
+            <div class="mx-2 mb-3 px-3 border col-sm-5 col-md-4 col-lg-3 col-xl-2">
+                <h5 class="pt-3">Appetizers</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos aliquam quibusdam, delectus sunt sint maiores? Velit aperiam similique veritatis commodi odio necessitatibus esse, nam, quia deleniti pariatur libero quibusdam ad?</p>
+            </div>
+            <div class="mx-2 mb-3 px-3 border col-sm-5 col-md-4 col-lg-3 col-xl-2">
+                <h5 class="pt-3">Seafood</h5>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi suscipit unde maiores modi, aliquid commodi cumque voluptates id ipsum molestias atque impedit sed natus, obcaecati nesciunt quis consequatur asperiores rem? Enim facilis sequi, soluta consequuntur similique nemo inventore perferendis hic!</p>
+            </div>
+            <div class="mx-2 mb-3 px-3 border col-sm-5 col-md-4 col-lg-3 col-xl-2">
+                <h5 class="pt-3">Meat</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum eum vero praesentium, minus mollitia excepturi consequuntur ex debitis est eveniet, voluptas at deserunt iusto blanditiis nostrum beatae! Incidunt distinctio tenetur beatae rerum possimus! Ex eaque corporis incidunt vero animi accusamus voluptatem autem magnam natus iure fugiat provident, commodi, sapiente maiores.</p>
+            </div>
+            <div class="mx-2 mb-3 px-3 border col-sm-5 col-md-4 col-lg-3 col-xl-2">
+                <h5 class="pt-3">Vegetarian</h5>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum eveniet corrupti consequuntur explicabo dolorum expedita qui architecto repudiandae quod quidem?</p>
+            </div>
+            <div class="mx-2 mb-3 px-3 border col-sm-5 col-md-4 col-lg-3 col-xl-2">
+                <h5 class="pt-3">Desserts</h5>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum laboriosam maxime voluptas ratione consequatur, omnis nobis. Dolorem at esse libero, quas est vero optio, aspernatur tempore a, incidunt quasi saepe labore nobis obcaecati quam quisquam quaerat facere nihil in pariatur necessitatibus consequatur reiciendis. Qui aperiam, aliquam recusandae magni obcaecati error vero dolor! Nihil doloribus facilis, dicta laboriosam beatae porro, laborum consectetur voluptatem a nisi fuga cum voluptate quibusdam sint culpa.</p>
+            </div>
+            <div class="mx-2 mb-3 px-3 border col-sm-5 col-md-4 col-lg-3 col-xl-2">
+                <h5 class="pt-3">Drinks</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum culpa labore quos nulla impedit natus sint molestiae est dolores. Consequatur nisi sapiente laborum veniam ad eaque nobis iure, totam consectetur quo laudantium consequuntur eum sed!</p>
+            </div>
+            <div class="mx-2 mb-3 px-3 border col-sm-5 col-md-4 col-lg-3 col-xl-2">
+                <h5 class="pt-3">Snacks</h5>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt illo temporibus porro atque optio officiis. Voluptates, ex blanditiis laboriosam minima quae assumenda quibusdam deleniti. Ratione explicabo voluptatem, iusto accusamus fugit enim natus, exercitationem modi sapiente, commodi eligendi architecto. Deserunt, velit. Fuga ut ipsa possimus perspiciatis cumque eos et?</p>
+            </div>
+        </div>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(function(){
+              $('[data-bs-toggle="tooltip"]').tooltip();
+            });
+        </script>
+    </body>
+</html>
+<!--Photo by Alyson McPhee on Unsplash-->

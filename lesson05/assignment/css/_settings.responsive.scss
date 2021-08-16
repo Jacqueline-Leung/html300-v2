@@ -1,52 +1,308 @@
-// Media Query Generator
+//Variables for responsive design
+$mobile-breakpoint: 350px;
+$large-mobile-breakpoint: 530px;
+$tablet-breakpoint: 700px;
+$laptop-breakpoint: 1030px;
+$desktop-breakpoint: 1200px;
 
-@mixin media-query($mq) {
-
-    $breakpoint-found: false;
-
-    // Loop through the list of breakpoints we’ve provided in our settings file.
-    @each $breakpoint in $breakpoints {
-
-        // Grab the alias and the condition from their respective locations in
-        // the list.
-        $alias:     nth($breakpoint, 1);
-        $condition: nth($breakpoint, 2);
-
-        // If the media query we’ve specified has an alias and a condition...
-        @if $mq == $alias and $condition {
-
-            // ...tell the mixin that we’ve found it...
-            $breakpoint-found: true;
-
-            // ...and spit it out here.
-            @media #{$condition} {
-                @content;
-            }
-
-        }
-
-    }
-
-    // If the user specifies a non-exitent alias, send them a warning.
-    @if $breakpoint-found == false{
-        @warn "Oops! Breakpoint ‘#{$mq}’ does not exist."
-    }
-
+//Media Query mixins
+@mixin mobile {
+  @media (min-width: #{$mobile-breakpoint}) and (max-width: #{$large-mobile-breakpoint - 1}) {
+    @content;
+  }
 }
 
-// Add breakpoints
-$breakpoints: (
-    "xl"            "screen and (min-width: 1300px)",
-    "desk"          "screen and (min-width: 1024px)",
-    "lg"            "screen and (min-width: 920px)",
-    "tab"           "screen and (min-width: 768px)",
-    "mobile"        "screen and (max-width: 767px)",
-    "infograph"     "screen and (min-width: 540px)",
-    "med"           "screen and (min-width: 40em)",
-    "sm"            "screen and (min-width: 30em)",
-    "small"         "screen and (min-width: 20em)",
-    "tiny"          "screen and (max-width: 320px)",
-    "retina"        "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)",
-    "ie"            "all and(-ms-high-contrast: none), (-ms-high-contrast: active)",
-    "ipad"          "screen and (min-device-width : 768px) and (max-device-width : 1024px)"
-) !default;
+@mixin tablet {
+  @media (min-width: #{$large-mobile-breakpoint}) and (max-width: #{$tablet-breakpoint - 1}) {
+    @content;
+  }
+}
+@mixin laptop {
+  @media (min-width: #{$tablet-breakpoint}) and (max-width: #{$laptop-breakpoint - 1}) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: #{$laptop-breakpoint}) {
+    @content;
+  }
+}
+
+//Media Query for mobile devices
+@include mobile {
+  .grid-container {
+    width: 90%;
+    height: 800px;
+    margin: 0 auto;
+    padding: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 1fr 2fr 0.5fr;
+    justify-content: center;
+    align-content: center;
+    header {
+      margin: 0;
+      padding: 1.5rem 3rem;
+    } //header
+    nav {
+      ul {
+        margin: 0;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        li {
+          padding: 2rem auto;
+          list-style: none;
+          text-align: center;
+          line-height: 2em;
+        } //li
+      } //ul
+    } //nav
+    aside {
+      display: none;
+    } //aside
+    main {
+      margin: 0;
+      padding: 1.5rem;
+      padding-bottom: 2.5rem;
+      grid-row-start: 3;
+      grid-row-end: 4;
+      .main-img {
+        width: 25rem;
+        height: auto;
+      }
+    }
+    footer {
+      grid-row-start: 4;
+      grid-row-end: 5;
+      padding: 1rem;
+      .footer-container {
+        margin: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        padding: 2rem auto;
+        text-align: center;
+        line-height: 2em;
+      } //.footer-container
+    } //footer
+  } //.grid-container
+}
+
+@include tablet {
+  .grid-container {
+    width: 90%;
+    height: 900px;
+    margin: 0 auto;
+    padding: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.7fr 7fr 1fr;
+    justify-content: center;
+    align-content: center;
+    header {
+      height: 120px;
+      padding: 1rem 4rem;
+    } //header
+    nav {
+      ul {
+        margin: 0;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        li {
+          padding: 1rem;
+          list-style: none;
+          text-align: center;
+        } //li
+      } //ul
+    } //nav
+    aside {
+      display: none;
+    } //aside
+    main {
+      padding: 1.5rem;
+      grid-row-start: 3;
+      grid-row-end: 4;
+      .main-img {
+        width: 30rem;
+        height: auto;
+      }
+    }
+    footer {
+      height: 120px;
+      padding: 1rem 4rem;
+      grid-row-start: 4;
+      grid-row-end: 5;
+      .footer-container {
+        margin: 0;
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        text-align: center;
+      } //.footer-container
+    } //footer
+  } //.grid-container
+}
+
+@include laptop {
+  .grid-container {
+    height: auto;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 0.7fr 7fr 1fr;
+    //grid-auto-rows: minmax(200px, auto);
+    justify-content: center;
+    align-content: center;
+
+    header {
+      grid-column: span 2;
+      .header-container {
+        margin: 1rem 4rem;
+      } //.header-container
+    } //header
+    nav {
+      @include font($size * 1.1, normal);
+      grid-column: span 2;
+      ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        li {
+          padding: 1em;
+          margin: 0 1em;
+        } //li
+      } //ul
+    } //nav
+    aside {
+      padding: 2em 1em;
+      grid-row-start: 3;
+      grid-row-end: 4;
+      justify-content: center;
+      div {
+        padding: 2em 1em;
+        text-align: center;
+        img {
+          width: 7rem;
+          height: auto;
+        } //img
+      } //div
+    } //aside
+    main {
+      margin: 0;
+      padding-top: 1em;
+      padding-bottom: 1em;
+      padding-left: 1.5em;
+      padding-right: 0;
+      grid-row-start: 3;
+      grid-row-end: 4;
+      section {
+        padding: 2em 2em;
+        align-items: stretch;
+        justify-content: center;
+        img {
+          width: 30rem;
+          height: auto;
+        }
+      } //section
+    } //main
+    footer {
+      grid-column: span 2;
+      .footer-container {
+        margin: 1em 4em;
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        text-align: center;
+      } //.footer-container
+    } //footer
+  } //.grid-container
+}
+@include desktop {
+  .grid-container {
+    max-width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 3.5fr;
+    grid-template-rows: 1fr 0.7fr 7fr 1fr;
+    grid-auto-rows: minmax(200px, auto);
+    justify-content: center;
+    align-content: center;
+
+    header {
+      grid-column: span 2;
+      .header-container {
+        margin: 1em 2em;
+      } //.header-container
+    } //header
+    nav {
+      @include font($size * 1.1, normal);
+      grid-column: span 2;
+      ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        li {
+          padding: 1em;
+          margin: 0 1em;
+        } //li
+      } //ul
+    } //nav
+    aside {
+      padding: 2em 1em;
+      grid-row-start: 3;
+      grid-row-end: 4;
+      justify-content: center;
+      div {
+        padding: 2em;
+        text-align: center;
+        img {
+          width: 7rem;
+          height: auto;
+        } //img
+      } //div
+    } //aside
+    main {
+      margin: 0;
+      padding-top: 1em;
+      padding-bottom: 1em;
+      padding-left: 4em;
+      padding-right: 0;
+      grid-row-start: 3;
+      grid-row-end: 4;
+      section {
+        padding: 2em 2em;
+        align-items: stretch;
+        justify-content: center;
+        img {
+          width: 45rem;
+          height: auto;
+        }
+      } //section
+    } //main
+    footer {
+      grid-column: span 2;
+      .footer-container {
+        margin: 1em 2em;
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        text-align: center;
+      } //.footer-container
+    } //footer
+  } //.grid-container
+}

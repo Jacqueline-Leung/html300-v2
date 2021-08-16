@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+        <link rel="stylesheet" href="../css/style.css" />
+        <title>Recipes | Assignment 06 - Bootstrap 4</title>
+    </head>
+    <body>
+        <div class="container">
+            <!--Nav bar-->
+            <nav class="navbar navbar-light bg-light navbar-expand-md">
+                <div class="container">
+                    <div class="navbar-brand text-success">Eat Well</div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#toggleNav" aria-controls="toggleNav" aria-expanded="false" aria-label="toggle navigation"><span class="navbar-toggler-icon"></span></button>                 
+                    <div class="collapse navbar-collapse" id="toggleNav">
+                        <div class="navbar-nav">
+                            <a class="nav-item nav-link" href="../index.html">Home</a>
+                            <a class="nav-item nav-link active" href="recipes.html">Recipes</a>                            
+                            <a class="nav-item nav-link" href="nutritions.html">Nutritions</a>                            
+                            <a class="nav-item nav-link" href="my-cookbook.html">My Cookbook</a>                           
+                        </div>
+                     </div>
+                </div>
+             </nav>
+        </div>
+
+        <div class="bg-danger" style="--bs-bg-opacity: .2">
+            <div class="m-3 p-3 text-center">
+                <h3 class="display-5 text-secondary pt-2 pb-3">Recipes</h3>
+                <img id="main-pic" class="img-fluid rounded-top" 
+                src="../images/andraz-lazic-iy_MT2ifklc-unsplash.jpg" alt="three raw samlmon sushi">
+            </div>
+            <!--Images, cards, grid system-->
+            <div class="row">
+                <figure class="figure text-center bg-light border col">
+                    <img class="figure-img rounded-top img-max py-3" src="../images/bryam-blanco-nXKWLn8y9qE-unsplash.jpg" alt="cupcakes">
+                    <figcaption class="figure-caption px-2 pb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil sunt, minus, enim, provident culpa magnam necessitatibus ipsum sapiente laudantium nam perferendis quo tempore ab? Quia voluptas velit laboriosam sed exercitationem, distinctio molestiae accusantium, eligendi voluptatem itaque voluptate sapiente inventore cupiditate asperiores consequatur optio quibusdam possimus suscipit reiciendis aperiam. Architecto, quam.
+                    </figcaption>
+                </figure>           
+
+                <figure class="figure text-center bg-light border col">
+                    <img class="figure-img rounded-top img-max py-3" src="../images/rebecca-g0GUAWtOh1c-unsplash.jpg" alt="macaroons">
+                    <figcaption class="figure-caption px-2 pb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil sunt, minus, enim, provident culpa magnam necessitatibus ipsum sapiente laudantium nam perferendis quo tempore ab? Quia voluptas velit laboriosam sed exercitationem, distinctio molestiae accusantium, eligendi voluptatem itaque voluptate sapiente inventore cupiditate asperiores consequatur optio quibusdam possimus suscipit reiciendis aperiam. Architecto, quam.
+                    </figcaption>
+                </figure>
+                
+                <figure class="figure text-center bg-light border col">
+                    <img class="figure-img rounded-top img-max py-3" src="../images/taylor-kiser-EvoIiaIVRzU-unsplash.jpg" alt="salad">
+                    <figcaption class="figure-caption px-2 pb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil sunt, minus, enim, provident culpa magnam necessitatibus ipsum sapiente laudantium nam perferendis quo tempore ab? Quia voluptas velit laboriosam sed exercitationem, distinctio molestiae accusantium, eligendi voluptatem itaque voluptate sapiente inventore cupiditate asperiores consequatur optio quibusdam possimus suscipit reiciendis aperiam. Architecto, quam.
+                    </figcaption>
+                </figure>
+
+                <figure class="figure text-center bg-light border col">
+                    <img class="figure-img rounded-top img-max py-3" src="../images/dionysius-samuel-1IbsXEMmkgQ-unsplash.jpg" alt="vermicelli">
+                    <figcaption class="figure-caption px-2 pb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil sunt, minus, enim, provident culpa magnam necessitatibus ipsum sapiente laudantium nam perferendis quo tempore ab? Quia voluptas velit laboriosam sed exercitationem, distinctio molestiae accusantium, eligendi voluptatem itaque voluptate sapiente inventore cupiditate asperiores consequatur optio quibusdam possimus suscipit reiciendis aperiam. Architecto, quam.
+                    </figcaption>
+                </figure>
+
+                <figure class="figure text-center bg-light border col">
+                    <img class="figure-img rounded-top img-max py-3" src="../images/ryan-kwok-vMdViMqgjtY-unsplash.jpg" alt="egg and rice">
+                    <figcaption class="figure-caption px-2 pb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil sunt, minus, enim, provident culpa magnam necessitatibus ipsum sapiente laudantium nam perferendis quo tempore ab? Quia voluptas velit laboriosam sed exercitationem, distinctio molestiae accusantium, eligendi voluptatem itaque voluptate sapiente inventore cupiditate asperiores consequatur optio quibusdam possimus suscipit reiciendis aperiam. Architecto, quam.
+                    </figcaption>
+                </figure>
+
+                <figure class="figure text-center bg-light border col">
+                    <img class="figure-img rounded-top img-max py-3" src="../images/louis-hansel-restaurant-photographer-CvLZ6hbIemI-unsplash.jpg" alt="fried rice">
+                    <figcaption class="figure-caption px-2 pb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil sunt, minus, enim, provident culpa magnam necessitatibus ipsum sapiente laudantium nam perferendis quo tempore ab? Quia voluptas velit laboriosam sed exercitationem, distinctio molestiae accusantium, eligendi voluptatem itaque voluptate sapiente inventore cupiditate asperiores consequatur optio quibusdam possimus suscipit reiciendis aperiam. Architecto, quam.
+                    </figcaption>
+                </figure>
+
+                <figure class="figure text-center bg-light border col">
+                    <img class="figure-img rounded-top img-max py-3" src="../images/charles-deluvio-D-vDQMTfAAU-unsplash.jpg" alt="dumplings">
+                    <figcaption class="figure-caption px-2 pb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil sunt, minus, enim, provident culpa magnam necessitatibus ipsum sapiente laudantium nam perferendis quo tempore ab? Quia voluptas velit laboriosam sed exercitationem, distinctio molestiae accusantium, eligendi voluptatem itaque voluptate sapiente inventore cupiditate asperiores consequatur optio quibusdam possimus suscipit reiciendis aperiam. Architecto, quam.
+                    </figcaption>
+                </figure>
+
+                <figure class="figure text-center bg-light border col">
+                    <img class="figure-img rounded-top img-max py-3" src="../images/victoria-shes-UC0HZdUitWY-unsplash.jpg" alt="BBQ kebab">
+                    <figcaption class="figure-caption px-2 pb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil sunt, minus, enim, provident culpa magnam necessitatibus ipsum sapiente laudantium nam perferendis quo tempore ab? Quia voluptas velit laboriosam sed exercitationem, distinctio molestiae accusantium, eligendi voluptatem itaque voluptate sapiente inventore cupiditate asperiores consequatur optio quibusdam possimus suscipit reiciendis aperiam. Architecto, quam.
+                    </figcaption>
+                </figure>
+
+                <figure class="figure text-center bg-light border col">
+                    <img class="figure-img rounded-top img-max py-3" src="../images/max-griss-cToNEm70cvE-unsplash.jpg" alt="soup">
+                    <figcaption class="figure-caption px-2 pb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil sunt, minus, enim, provident culpa magnam necessitatibus ipsum sapiente laudantium nam perferendis quo tempore ab? Quia voluptas velit laboriosam sed exercitationem, distinctio molestiae accusantium, eligendi voluptatem itaque voluptate sapiente inventore cupiditate asperiores consequatur optio quibusdam possimus suscipit reiciendis aperiam. Architecto, quam.
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    </body>
+</html>
+<!--Photo by Andraz Lazic on Unsplash-->
+<!--Photo by Bryam Blanco on Unsplash-->
+<!--Photo by Rebecca on Unsplash-->
+<!--Photo by Taylor Kiser on Unsplash-->
+<!--Photo by Dionysius Samuel on Unsplash-->
+<!--Photo by Louis Hansel - Restaurant Photographer on Unsplash-->
+<!--Photo by Ryan Kwok on Unsplash-->
+<!--Photo by Charles Deluvio on Unsplash-->
+<!--Photo by Victoria Shes on Unsplash-->
+<!--Photo by Max Griss on Unsplash-->
