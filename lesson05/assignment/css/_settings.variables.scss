@@ -1,1 +1,37 @@
-// Colors
+//Font
+@import url("https://fonts.googleapis.com/css?family=Marcellus:400,700");
+
+//Varibles for font
+$font-fam: "Marcellus", serif;
+$size: 14px;
+
+//Font Mixin
+@mixin font($size, $style) {
+    font-family: $font-fam;
+    color: $text-color;
+    font-size: $size;
+    font-style: $style;
+}
+
+//Variables for colors
+$dark-violet: #4d194d;
+$pale-pink: #f0ead2;
+$burgundy: #9d0208;
+$green: #7ab81d;
+$pale-green: #ccd5ae;
+$pale-yellow: #ffffb7;
+$orange: #fb8500;
+$pale-orange: #fae1dd;
+$pale-peach: #f8edeb;
+$off-white: #f0efeb;
+
+$background-color: $pale-pink;
+$text-color: $dark-violet;
+$a-color: $green;
+$border-bottom: $green;
+$outline: $burgundy;
+$header-footer-color: $pale-green;
+$nav-color: $pale-orange;
+$aside-color: $pale-peach;
+$body-color: $off-white;
+

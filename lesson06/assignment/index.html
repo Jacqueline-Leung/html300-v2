@@ -4,12 +4,97 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
         <link rel="stylesheet" href="css/style.css" />
         <title>Assignment 06 - Bootstrap 4</title>
     </head>
     <body>
-        <main class="main">
-          
-        </main>
+        <div class="container">
+            <!--Nav bar-->
+            <nav class="navbar navbar-light bg-light navbar-expand-md">
+                <div class="container">
+                    <div class="navbar-brand text-success">Eat Well</div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#toggleNav" aria-controls="toggleNav" aria-expanded="false" aria-label="toggle navigation"><span class="navbar-toggler-icon"></span></button>                 
+                    <div class="collapse navbar-collapse" id="toggleNav">
+                        <div class="navbar-nav">
+                            <a class="nav-item nav-link active" href="index.html">Home</a>
+                            <a class="nav-item nav-link" href="pages/recipes.html">Recipes</a>                            
+                            <a class="nav-item nav-link" href="pages/nutritions.html">Nutritions</a>
+                            <a class="nav-item nav-link" href="pages/my-cookbook.html">My Cookbook</a>                           
+                        </div>
+                     </div>
+                </div>
+             </nav>
+        </div>
+        <!--Carousel-->
+        <div class="m-5 p-3">
+            <div id="carousel" class="carousel slide carousel-fade" pause="false" wrap="true" data-bs-touch="false" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                </div>
+                <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../images/brian-mcgowan-w46WZBxI_uk-unsplashRS.jpg" class="d-block w-100" alt="lettuce">
+                    <div class="carousel-caption text-warning">
+                    <h4>Lettuce</h4>                 
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="../images/huzeyfe-turan--jzHXOYtcA4-unsplashRS.jpg" class="d-block w-100" alt="tomatoes">
+                    <div class="carousel-caption text-secondary" style="--bs-bg-opacity: .1">
+                    <h4>Tomatoes</h4>                 
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="../images/thoa-ngo-JYtJBonIwpE-unsplashRS.jpg" class="d-block w-100" alt="rice">
+                    <div class="carousel-caption text-light">
+                    <h4>Rice</h4>                 
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="../images/sentot-setyasiswanto-2VePbF_YRK8-unsplashRS.jpg" class="d-block w-100" alt="ginger">
+                    <div class="carousel-caption text-secondary">
+                    <h4>Ginger</h4>                 
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="../images/tijana-drndarski-HJfUAiy488A-unsplashRS.jpg" class="d-block w-100" alt="cinnamon">
+                    <div class="carousel-caption text-secondary">
+                    <h4>Cinnamon</h4>                 
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="../images/ernest-porzi-Z-Y6I45f9kQ-unsplashRS.jpg" class="d-block w-100" alt="lemon">
+                    <div class="carousel-caption text-light">
+                    <h4>Lemon</h4>                 
+                    </div>
+                </div>             
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
     </body>
 </html>
+
+<!--Photo by Brian McGowan on Unsplash-->
+<!--Photo by Huzeyfe Turan on Unsplash-->
+<!--Photo by Thoa Ngo on Unsplash-->
+<!--Photo by sentot setyasiswanto on Unsplash-->
+<!--Photo by Tijana Drndarski on Unsplash-->
+<!--Photo by Ernest Porzi on Unsplash-->
