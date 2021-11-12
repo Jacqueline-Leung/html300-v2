@@ -1,13 +1,56 @@
+//set box model
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *,
 *:after,
 *:before {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
+//layout
+body {
+  background-color: $body-color;
+  margin: 0;
+  min-height: 100vh;
+  @include font($size, normal);
 
-.main {
-    padding: 2rem;
-}
+  .grid-container {
+    header {
+      background-color: $header-footer-color;
+    } //header
+    nav {
+      background-color: $nav-color;
+      ul {
+        li {
+          list-style: none;
+          a {
+            text-decoration: none;
+            color: $a-color;
+            &:hover {
+              color: darken($a-color, 25%);
+              font-weight: bold;
+            } //hover
+          } //a
+        } //li
+      } //ul
+    } //nav
+    aside {
+      background-color: $aside-color;
+    } //aside
+    main {
+      background-color: $background-color;
+    } //main
+    footer {
+      background-color: $header-footer-color;
+      a {
+        text-decoration: none;
+        color: $a-color;
+        &:hover {
+          color: darken($a-color, 25%);
+          font-weight: bold;
+        } //hover
+      } //a
+    } //footer
+  } //.grid-container
+} //body

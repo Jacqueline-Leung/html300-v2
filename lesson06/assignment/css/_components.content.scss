@@ -1,13 +1,39 @@
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *,
 *:after,
 *:before {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 .main {
-    padding: 2rem;
+  padding: 2rem;
+}
+//main page
+.carousel-inner {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  border-radius: 5px;
+}
+.carousel-caption {
+  top: 0;
+  bottom: auto;
+}
+
+//nutritions page
+.jumbotron {
+  background-image: url("../images/alyson-mcphee-yWG-ndhxvqY-unsplash.jpg");
+  background-size: cover;
+}
+
+//nutritions & recipes page, image sizes
+.img-max {
+  max-width: 300px;
+}
+#main-pic {
+  max-height: 380px;
+  max-width: auto;
 }
