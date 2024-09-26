@@ -1,0 +1,11 @@
+Topic:
+
+I would like to build a website about food, which would cover areas like recipes, ingredients and their nutrition. 
+
+Reasons:
+
+First, I love food. This is a topic that I am interested in, so it will be a lot of fun for me to work on. Second, since the beginning of the pandemic, a lot more people cook and bake at home, people look for and share recipes, have their first time try of making bread or other dishes. It would be a fun website for a lot of people to browse and get ideas. Last, I also want to include the nutrition information. People get more concern about health issues because of the pandemic, I would like my website to provide helpful and useful resources in this area as well.
+
+Plan:
+
+My website will have a few webpages. A page about recipes, a page has videos showing how to cook different dishes, a page about nutrition. If possible, I am thinking to include a page that people can post and share their recipes and ideas, and a page that they can create their own recipe books to store their favorite recipes. Also, if possible, I may include a page about international cuisines or food festivals around the world, as a fun piece of news. APIs about recipes and nutrition will be good resources.
